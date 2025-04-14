@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.env
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# FastAPI / Uvicorn logs
+*.log
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Environments
+.env.*
+*.env
+
+# Pytest
+.cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VSCode settings
+.vscode/
+
+# Idea settings (Jetbrains IDEs like PyCharm)
+.idea/
+
+# Coverage reports
+htmlcov/
+coverage.xml
+.coverage
+
+# Redis dumps
+dump.rdb
+
+# Local database files
+*.db
+
+# Alembic
+alembic.ini
+
+# System files
+.DS_Store
+Thumbs.db

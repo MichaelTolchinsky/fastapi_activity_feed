@@ -30,6 +30,20 @@ class ActivityRepository:
         activity = result.scalars().first()
         return activity
 
+    async def get_user_feed(
+        self, user_id: int, limit: int = 10, offset: int = 0
+    ) -> list[Activity]:
+        stmt = (
+            select(Activity)
+            .where(Activity.user_id == user_id)
+            .order_by(Activity.timestamp.desc())
+            .offset(offset)
+            .limit(limit)
+        )
+        result = await self.db.execute(stmt)
+        activities = result.scalars().all()
+        return activities
+
 
 async def get_activity_repository(
     db: AsyncSession = Depends(get_db_session),

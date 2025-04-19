@@ -23,6 +23,12 @@ class ActivityService:
             return None
         return ActivityResponseDTO.model_validate(activity)
 
+    async def get_user_feed(
+        self, user_id: int, limit: int = 10, offset: int = 0
+    ) -> list[ActivityResponseDTO]:
+        activities = await self.activity_repo.get_user_feed(user_id, limit, offset)
+        return [ActivityResponseDTO.model_validate(activity) for activity in activities]
+
 
 async def get_activity_service(
     activity_repo: ActivityRepository = Depends(get_activity_repository),

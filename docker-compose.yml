@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     volumes:
-      - .:/app # Mount your code inside container
+      - .:/app
     depends_on:
       - postgres
     environment:

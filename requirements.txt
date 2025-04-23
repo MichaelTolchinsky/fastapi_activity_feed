@@ -7,3 +7,4 @@ redis
 pydantic
 python-dotenv
 pydantic-settings
+redis[async]

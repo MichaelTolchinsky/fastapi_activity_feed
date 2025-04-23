@@ -25,10 +25,10 @@ async def get_activity(activity_id: int, activity_service: ActivityService = Dep
 
 
 @router.get("/feed/{user_id}", response_model=List[ActivityResponseDTO])
-async def get_user_feed(
+async def get_user_activities(
     user_id: int,
     limit: int = 10,
     offset: int = 0,
     activity_service: ActivityService = Depends(get_activity_service),
 ):
-    return await activity_service.get_user_feed(user_id, limit, offset)
+    return await activity_service.get_user_activities(user_id, limit, offset)

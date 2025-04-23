@@ -9,6 +9,10 @@ class Settings(BaseSettings):
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
     POSTGRES_PORT: str = "5432"
+    # Redis
+    REDIS_HOST: str
+    REDIS_PORT: int
+    REDIS_TTL: int
 
     @property
     def database_url(self) -> str:

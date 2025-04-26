@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     REDIS_HOST: str
     REDIS_PORT: int
     REDIS_TTL: int
+    # Kafka
+    KAFKA_HOST: str
+    KAFKA_PORT: int
 
     @property
     def database_url(self) -> str:

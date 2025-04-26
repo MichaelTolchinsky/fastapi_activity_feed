@@ -7,7 +7,7 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title="Activity Feed API",
         version="0.0.0",
-        description="Mini Social Platform feed built with FastAPI, Kafka, Redis, Postgres",
+        description="Mini Social Platform like feed built with FastAPI, Kafka, Redis, Postgres",
         lifespan=lifespan,
     )
 

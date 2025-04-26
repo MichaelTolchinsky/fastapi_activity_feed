@@ -30,7 +30,7 @@ class ActivityRepository:
         activity = result.scalars().first()
         return activity
 
-    async def get_user_activities(self, user_id: int, limit: int = 10, offset: int = 0) -> list[Activity]:
+    async def get_user_activities(self, user_id: int, limit: int = 5, offset: int = 0) -> list[Activity]:
         stmt = (
             select(Activity)
             .where(Activity.user_id == user_id)
